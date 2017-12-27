@@ -1,0 +1,32 @@
+{
+  "name": "netio4-outgoing-messages-controller",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:newridetech/netio4-outgoing-messages-controller.git",
+  "author": "Mateusz Charytoniuk <mateusz.charytoniuk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.175.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "firebase": "4.8.0",
+    "glob-stream": "^6.1.0",
+    "is-promise": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.2",
+    "@types/express": "^4.11.0",
+    "@types/glob-stream": "^6.1.0",
+    "@types/is-promise": "^2.1.0",
+    "@types/node": "^8.5.2",
+    "ava": "^0.24.0",
+    "tap-xunit": "^2.2.0",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc",
+    "serve": "./node_modules/.bin/ts-node --type-check app.ts",
+    "test": "npm run build && ./node_modules/.bin/ava --tap dist/**/*.test.js"
+  }
+}
