@@ -1,13 +1,13 @@
 import express = require('express');
 
-import feedAppWithRoutes from './bootstrap/feedAppWithRoutes';
-import feedAppWithServices from './bootstrap/feedAppWithServices';
+import routes from './bootstrap/routes';
+import services from './bootstrap/services';
 
 export default function bootstrap(): Promise<express.Application> {
     const app: express.Application = express();
 
     return Promise.all([
-        feedAppWithServices(app),
-        feedAppWithRoutes(app),
+        services(app),
+        routes(app),
     ]).then(() => app);
 }
